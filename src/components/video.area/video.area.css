@@ -1,0 +1,31 @@
+.video-area {
+  position: relative;
+  width: 100vmin;
+  margin: auto;
+  margin-top: 2%;
+}
+@media (max-width: 1000px) {
+  .video-area {
+    margin: auto;
+  }
+}
+
+.react-video-wrap {
+  position: relative !important;
+  margin: auto;
+  width: 100% !important;
+}
+
+.video-title {
+  font-size: 4vmin;
+  margin: 10px;
+  width: 640px;
+}
+
+.hidden-cam {
+  max-width: 0px !important;
+  max-height: 0px !important;
+  position: absolute !important;
+  visibility: hidden !important;
+  display: hidden !important;
+}

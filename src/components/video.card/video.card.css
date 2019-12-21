@@ -1,0 +1,37 @@
+.card {
+  position: relative;
+  flex-direction: row !important;
+  width: 43vmin;
+  height: 17vmin;
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  margin: 8px;
+}
+
+.card-body {
+  margin-left: 3%;
+}
+
+.card-title {
+  position: relative;
+  font-size: 3vmin !important;
+  color: white;
+  top: 5%;
+  left: 5%;
+}
+
+.card-subtitle {
+  position: relative;
+  font-size: 2vmin !important;
+  color: #a1a1a1;
+  top: 5%;
+  left: 5%;
+}
+
+.card-img-top {
+  position: relative;
+  width: 20vmin !important;
+  height: 15vmin !important;
+  background-size: contain;
+  margin: auto;
+  left: 3%;
+}

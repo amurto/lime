@@ -1,0 +1,18 @@
+.video-card-list {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  width: 185vmin;
+  height: 100%;
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 10%;
+}
+
+@media (max-width: 1000px) {
+  .video-card-list {
+    grid-template-columns: 1fr 1fr;
+    width: 100vmin;
+  }
+}
