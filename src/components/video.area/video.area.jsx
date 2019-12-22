@@ -1,14 +1,26 @@
-import React, { useState, useCallback, useRef, useEffect } from "react";
+import React, {
+  useState,
+  useCallback,
+  useRef,
+  useLayoutEffect,
+  useEffect
+} from "react";
 import VideoPlayer from "react-video-markers";
 import Webcam from "react-webcam";
 import "./video.area.css";
 import axios from "axios";
 
-const VideoArea = () => {
+const VideoArea = props => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(0.7);
 
   const [timerId, setTimerId] = useState(null);
+  const [video, setVideo] = useState(props.video);
+
+  useEffect(() => {
+    setVideo(props.video);
+  }, [props.video]);
+
   // let imageSrc = null;
   // const [captureYes, setCaptureYes] = useState(true);
   const webcamRef = useRef(null);
@@ -52,7 +64,23 @@ const VideoArea = () => {
       clearInterval(timerId);
     }
   };
+  // const captureViewer = () => {
+  //   if (isPlaying) {
+  //   } else if (!isPlaying) {
+  //   }
+  // };
 
+  // useLayoutEffect(() => {
+  //   // navigator.getUserMedia =
+  //   //   navigator.getUserMedia ||
+  //   //   navigator.webkitGetUserMedia ||
+  //   //   navigator.mozGetUserMedia ||
+  //   //   navigator.msGetUserMedia ||
+  //   //   navigator.oGetUserMedia;
+  //   if (navigator.mozGetUserMedia) {
+  //     navigator.mozGetUserMedia({ video: true }, handleVideo, videoError);
+  //   }
+  // }, []);
   useEffect(captureViewer, [isPlaying]);
 
   const handlePlay = () => {
@@ -69,13 +97,21 @@ const VideoArea = () => {
     setVolume(vol);
   };
 
-  const videoURL =
-    "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4";
+  const handleVideo = stream => {
+    console.log(stream);
+
+    // Update the state, triggering the component to re-render with the correct stream
+    console.log(window.URL.createObjectURL(stream));
+  };
+
+  const videoError = () => {
+    console.log("error");
+  };
 
   return (
     <div className="video-area">
       <VideoPlayer
-        url={videoURL}
+        url={video.url}
         isPlaying={isPlaying}
         volume={volume}
         onPlay={handlePlay}
@@ -93,7 +129,7 @@ const VideoArea = () => {
           videoConstraints={videoConstraints}
         />
       </div>
-      <h1 className="video-title">This is a video title</h1>
+      <h1 className="video-title">{video.title}</h1>
     </div>
   );
 };

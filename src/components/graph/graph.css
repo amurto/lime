@@ -1,0 +1,11 @@
+.graph-container {
+  position: relative;
+  width: 50vmin;
+  height: 40vmin;
+  margin: auto;
+  margin-top: 3%;
+}
+
+.graph {
+  height: 100%;
+}

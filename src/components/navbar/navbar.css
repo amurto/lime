@@ -3,9 +3,19 @@
 }
 
 .navbar-brand {
+  font-size: 4vmin !important;
   color: rgba(255, 255, 255, 0.97) !important;
+  padding-top: 0% !important;
+  margin-left: 5%;
 }
 
 .nav-link {
   color: rgba(233, 233, 233, 0.5) !important;
+}
+
+.app-navbar {
+  position: absolute;
+  width: 100%;
+  top: 0%;
+  z-index: 2;
 }

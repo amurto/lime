@@ -12,6 +12,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
+import { Link } from "react-router-dom";
 import "./navbar.css";
 
 const AppNavbar = props => {
@@ -20,31 +21,22 @@ const AppNavbar = props => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
+    <div className="app-navbar">
       <Navbar color="dark" light expand="md">
         <NavbarBrand href="/">Lime</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/components/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                GitHub
-              </NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>Option 1</DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
+            <Link to="/watch">
+              <NavItem>
+                <NavLink>Watch</NavLink>
+              </NavItem>
+            </Link>
+            <Link to="/dashboard">
+              <NavItem>
+                <NavLink>Dashboard</NavLink>
+              </NavItem>
+            </Link>
           </Nav>
         </Collapse>
       </Navbar>

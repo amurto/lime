@@ -4,7 +4,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   width: 185vmin;
-  height: 100%;
+  /* height: 60%; */
   margin: auto;
   margin-top: 3%;
   margin-bottom: 10%;

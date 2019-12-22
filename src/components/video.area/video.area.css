@@ -2,7 +2,7 @@
   position: relative;
   width: 100vmin;
   margin: auto;
-  margin-top: 2%;
+  margin-top: 6%;
 }
 @media (max-width: 1000px) {
   .video-area {
@@ -26,6 +26,8 @@
   max-width: 0px !important;
   max-height: 0px !important;
   position: absolute !important;
+  margin-top: 0% !important;
+  margin-left: 0% !important;
   visibility: hidden !important;
-  display: hidden !important;
+  display: none !important;
 }
