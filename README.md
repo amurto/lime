@@ -1,9 +1,18 @@
-# clay
+# lime
+Attention Span Detection for Audio-Visual Content Analysis
+
+# Description
+
 Project for CodeBreak2019, MIT Pune.
 
-CodeBreak.ipynb is collab notebook for emotion and attention recognition
+[CodeBreak.ipynb]() is a Google Colab notebook for Emotion and Attention recognition.
 
-this NoteBook generates a csv file mapping each second to attention and emotion at that perticular moment
-and generates a graph of Attention vs Time 
+This noteBook generates a csv file mapping each second to attention and emotion at that particular moment and generates a graph of Attention vs Time.
 
-and the frontend is written in react with nodejs as backend for users and participants 
+The frontend webapp is written in React with Node.js as backend for users and participants.
+
+# Webapp Images
+
+![Demo1](templates/demo1.jpg)
+![Demo2](templates/demo2.jpg)
+![Demo3](templates/demo3.jpg)
