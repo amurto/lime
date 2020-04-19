@@ -1,7 +1,7 @@
 # lime
 Attention Span Detection for Audio-Visual Content Analysis
 
-# Description
+## Description
 
 Project for CodeBreak2019, MIT Pune.
 
@@ -11,7 +11,7 @@ This noteBook generates a csv file mapping each second to attention and emotion 
 
 The frontend webapp is written in React with Node.js as backend for users and participants.
 
-# Webapp Images
+## Webapp Images
 
 ![Demo1](templates/demo1.jpg)
 ![Demo2](templates/demo2.jpg)
